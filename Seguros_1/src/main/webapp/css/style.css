@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Popping', sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 90px;
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo-company{
+    display: inline-block;
+
+}
+.nombre-company{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+.number{
+    padding-top: 20px;
+}
+.logo-number{
+    display: inline-block;
+}
+.number{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+.logo-login{
+    vertical-align: central;
+    padding-bottom: 20px;
+}
+.etiqueta{
+    width:20%;
+    display:inline-block;
+    padding: 15px;
+    border: 15px;
+    display: inline-block;
+    color: #fff;
+}
+.campo{
+    width:60%;
+    padding: 15px;
+    border: 15px;
+    display:inline-block
+}
+.contendor{
+    padding: 15px;
+     border: 5px;
+}
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 600px;
+    border-radius: 25px;
+    padding: 5%;
+    background-color: lightblue;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+}
+.texto-login{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+
+.username-icon{
+    display: inline-block;
+    background-color: gray;
+    position: absolute;
+    margin-bottom: 50px;
+}
+.input{
+    padding-bottom: 10px;
+}
+.input-username{
+    display: inline-block;
+    padding: 12px 0 12px 43px;
+}
+
+.input-password{
+    display: inline-block;
+    padding: 12px 0 12px 43px;
+}
+
+/*body{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    min-height: 100vh;*/
+/*}*/
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation .button-login{
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.footer{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 90px;
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.footer-nombre{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+
+
+.footer-credenciales{
+     display: inline-block;
+    color: #fff;
+}
+.company-icon{
+    display: inline-block;
+    
+}
+
+.btn-login{
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+
+.register-nombre{
+    display: inline-block;
+    color: #fff;
+}
