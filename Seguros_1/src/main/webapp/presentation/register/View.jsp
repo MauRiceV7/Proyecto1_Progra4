@@ -19,7 +19,7 @@
             <div><h1 class="register-nombre">Register</h1></div>     
             <div class="contendor">
                 <div class="etiqueta">Cedula:</div>  
-                <div class="campo"><input type="text" name="cedulaFld" id="cedulaFld" placeholder="Cedula" ></div>
+                <div class="campo"><input type="text" name="idFld" id="idFld" placeholder="Cedula" ></div>
             </div>
             <div class="contendor">
                 <div class="etiqueta">Clave:</div>  

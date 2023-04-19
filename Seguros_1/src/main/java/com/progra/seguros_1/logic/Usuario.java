@@ -18,10 +18,24 @@ public class Usuario {
         this.datosTarjeta = datosTarjeta;
         this.tipo = tipo;
     }
+         public Usuario(String id, String clave, String Nombre, String telefono, String correo, String datosTarjeta) {
+        this.id = id;
+        this.clave = clave;
+        this.Nombre = Nombre;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.datosTarjeta = datosTarjeta;
+        this.tipo = 1;
+    }
+     
      
     public Usuario(){
         this.id = "";
         this.clave = "";
+        this.Nombre = "";
+        this.telefono = "";
+        this.correo = "";
+        this.datosTarjeta = "";
         this.tipo = 1;
     }
     public String getId() {

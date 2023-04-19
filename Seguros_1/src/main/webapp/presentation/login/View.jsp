@@ -15,26 +15,29 @@
         <% Map<String,String> errores = (Map<String,String>) request.getAttribute("errores"); %>
         <% Map<String,String[]> form = (errores==null)?this.getForm(model):request.getParameterMap();%>
         
+        
+        
+        
         <h1>Login</h1> 
         <%@ include file="/presentation/Header.jsp" %>
         <main>
             <div class="wrapper">
                 <div>
-                  <div><h3 class="texto-login">Login</h3></div>
-                  <div class="logo-login"><img src="image/login-icon.svg " alt="login-icon" style="height: 5em"></div>
+                  <div><h3>Login</h3></div>
+                  <div><img src="image/login-icon.svg " alt="login-icon" style="height: 5em"></div>
                 </div>
-                <form name="form" action="presentation/login/login" method = "post">
+               <form name="form" action="presentation/login/login" method = "post">
                  <div>
                  <div class="input">
-                   <div class="input-group flex-nowrap">
-                     <span class="input-group-text" id="addon-wrapping"><img src="image/username-icon.svg" alt="username-icon" style="height: 1em;"></span>
-                     <input  type="text" name="id" class="form-control" placeholder="Username" aria-label="Nombre de usuario" aria-describedby="addon-wrapping">
+                   <div>
+                     <span><img src="image/username-icon.svg" alt="username-icon" style="height: 1em;"></span>
+                     <input  type="text" name="id" placeholder="Username" aria-label="id de usuario" class="<%=erroneo("id",errores)%>" value="<%=form.get("id")[0]%>" title="<%=title("id",errores)%>">
                    </div>
                  </div>
                  <div class="input">
-                   <div class="input-group flex-nowrap">
-                     <span class="input-group-text" id="addon-wrapping2"> <img src="image/password-icon.svg" alt="username-icon" style="height: 1em"> </span>
-                     <input  type="password" name="clave" class="form-control" placeholder="Password" aria-label="Nombre de usuario" aria-describedby="addon-wrapping">
+                   <div>
+                     <span><img src="image/password-icon.svg" alt="username-icon" style="height: 1em"> </span>
+                     <input  type="password" name="clave" placeholder="Password" aria-label="clave de usuario" class="<%=erroneo("clave",errores)%>"  value="<%=form.get("clave")[0]%>" title="<%=title("clave",errores)%>">
                    </div>
                  </div>
                  <div>
@@ -48,7 +51,7 @@
                 </form>
                 <div>
                   <div><h3>Don't have an account?</h3></div>
-                  <a href="presentation/login/register">Register</a>
+                  <a href="presentation/register/login">Register</a>
                 </div>
                 <div>or</div>
                 <div>
@@ -59,11 +62,6 @@
         </main>
         <%@ include file="/presentation/Footer.jsp" %>
         
-        
-
-    </body>
-</html>
-
 <%!
     private String erroneo(String campo, Map<String,String> errores){
       if ( (errores!=null) && (errores.get(campo)!=null) )
@@ -87,3 +85,7 @@
     }
     
 %> 
+
+    </body>
+</html>
+

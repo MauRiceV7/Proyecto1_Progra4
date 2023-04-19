@@ -43,20 +43,18 @@ header{
 .etiqueta{
     width:20%;
     display:inline-block;
-    padding: 15px;
-    border: 15px;
+    border: 10px;
     display: inline-block;
     color: #fff;
 }
 .campo{
     width:60%;
-    padding: 15px;
-    border: 15px;
+    padding: 16px;
+    border: 20px;
     display:inline-block
 }
 .contendor{
-    padding: 15px;
-     border: 5px;
+     border: 4px;
 }
 
 .wrapper{
@@ -141,13 +139,12 @@ main{
     align-items: center;
     z-index: 99;
 }
+
 .footer-nombre{
     display: inline-block;
     color: #fff;
     font-weight: 500;
 }
-
-
 .footer-credenciales{
      display: inline-block;
     color: #fff;
@@ -156,18 +153,26 @@ main{
     display: inline-block;
     
 }
-
 .btn-login{
     height: 40px;
     width: 100%;
+    padding-bottom: 10px;
     border-radius: 6px;
     cursor: pointer;
     background-color: black;
     color: white;
 }
-
-
 .register-nombre{
     display: inline-block;
     color: #fff;
+}
+
+
+input[type=text].is-invalid,input[type=password].is-invalid{
+    border-color: red;
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 12 12;
+    background-image: url("/Banca/images/is-invalid.png");    
 }

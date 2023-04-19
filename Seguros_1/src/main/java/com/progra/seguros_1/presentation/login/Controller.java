@@ -28,8 +28,9 @@ import java.util.logging.Logger;
             "/presentation/login/show"
         ,"/presentation/login/login",
         "/presentation/login/logout",
-        "/presentation/login/register",
-        "/presentation/register/register"})
+        "/presentation/register/login",
+        "/presentation/register/register"
+})
 public class Controller extends HttpServlet {
    
     /** 
@@ -53,7 +54,7 @@ public class Controller extends HttpServlet {
             case "/presentation/login/logout":
                 viewUrl=this.logout(request);
                 break;
-            case "/presentation/login/register":
+            case "/presentation/register/login":
                 viewUrl = "/presentation/register/View.jsp"; break;
                 
             case "/presentation/register/register":
@@ -85,27 +86,26 @@ public class Controller extends HttpServlet {
             }else {
                 request.setAttribute("errores", errores);
 //                return "/presentation/cliente/datos/View.jsp";
-                return "/presentation/login/View.jsp";  
+                 return "/presentation/login/View.jsp"; 
             }
         } catch (Exception e) {
             //TODO HAY QUE HACER QUE CUANDO NO LO ENCUENTRE AL USUARIO LO MARQUE EN ROJO Y LE PIDA
             // UNA CEDULA Y UN PASSWORD CORRECTO
 //            return "/presentation/Error.jsp";
 //            return "/presentation/login/View.jsp";
-            return "/presentation/login/View.jsp"; 
+            return "/presentation/Error.jsp";   
         }
     }
     
     Map<String, String> validar(HttpServletRequest request) {
         Map<String, String> errores = new HashMap<>();
         //Por el momento no lo puedo hacer 
-//        if (request.getParameter("cedulaFld").isEmpty()) {
-//            errores.put("cedulaFld", "Cedula requerida");
-//        }
-//
-//        if (request.getParameter("claveFld").isEmpty()) {
-//            errores.put("claveFld", "Clave requerida");
-//        }
+        if (request.getParameter("id").isEmpty()) {
+            errores.put("id", "Cedula requerida");
+        }
+        if (request.getParameter("clave").isEmpty()) {
+            errores.put("clave", "Clave requerida");
+        }
         return errores;
     }
 
@@ -141,7 +141,11 @@ public class Controller extends HttpServlet {
 //            errores.put("cedulaFld","Usuario o clave incorrectos");
 //            errores.put("claveFld","Usuario o clave incorrectos");
 //            return "/presentation/login/View.jsp"; 
-                return "/presentation/Index.jsp";
+            Map<String,String> errores = new HashMap<>();
+            request.setAttribute("errores", errores);
+            errores.put("id","Usuario o clave incorrectos");
+            errores.put("clave","Usuario o clave incorrectos");
+            return "/presentation/login/View.jsp"; 
         }
     }
     
@@ -149,28 +153,34 @@ public class Controller extends HttpServlet {
          HttpSession session = request.getSession(true);
          session.removeAttribute("Usuario");
          session.invalidate();
-         return "/presentation/Index.jsp";
+         return "/presentation/login/View.jsp";
      }
     
     public String register(HttpServletRequest request) {
         // TO-DO AGREGAR LOS PARAMETROS A LOS DATOS QUEMADOS
         // Y VERIFICAR QUE LOS USUARIOS NO SE ESTEN REPITIENDO 
-        
-        
-        
-//          Model model = (Model) request.getAttribute("model");
-//         Service service = Service.instance();
-//         HttpSession session = request.getSession(true);
-//         Usuario real = null;
-//        try {
-//            real = service.usuarioFind(model.getCurrent().getId(), model.getCurrent().getClave());
-//        } catch (Exception ex) {
-//            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//         session.setAttribute("Usuario", real);
-//         String viewUrl = "";
-// 
-        return "/presentation/Index.jsp";
+          Model model = (Model) request.getAttribute("model");
+         Service service = Service.instance();
+         HttpSession session = request.getSession(true);
+         Usuario register = new Usuario(request.getParameter("idFld"),request.getParameter("claveFld"),
+                         request.getParameter("nombreFld"),request.getParameter("telefonoFld"),
+                         request.getParameter("correoFld"),request.getParameter("tarjetaFld"));
+         if(!"".equals(register.getId())){
+             this.updateModel(request);
+            service.getUsuarios().put(request.getParameter("idFld"),register );
+         }else{
+             return "/presentation/Error.jsp";
+         }
+         
+         System.out.println(service.getUsuarios());
+//     private String id;
+//     private String clave;
+//     private String Nombre;
+//     private String telefono;
+//     private String correo;
+//     private String datosTarjeta;
+//     private Integer tipo;
+        return "/presentation/login/View.jsp"; 
     }
     
     
@@ -223,5 +233,4 @@ public class Controller extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }

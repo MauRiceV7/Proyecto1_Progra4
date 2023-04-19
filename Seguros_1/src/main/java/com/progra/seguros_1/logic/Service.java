@@ -61,7 +61,7 @@ public class Service {
 //    private Usuario usuario;
     }
      public Usuario usuarioFind(String cedula,String clave) throws Exception{
-        if (usuarios.get(cedula)!=null) return usuarios.get(cedula);
+        if (usuarios.get(cedula)!=null && usuarios.get(cedula).getClave() != null ) return usuarios.get(cedula);
         else throw new Exception("Usuario no existe");
     }  
 }
