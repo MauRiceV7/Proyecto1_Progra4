@@ -9,13 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+         <%@ include file="/presentation/Head.jsp" %>
+        <title>Administrador</title>
     </head>
     <body>
-        <br>
-        <br>
-        <br> 
-        <br>
-        <h1>Hello World!</h1>
+         <%@ include file="/presentation/Header.jsp" %>
+         <main>
+              <h1>Aqui ira los menus del administrador </h1> 
+             
+         </main>
+          <%@ include file="/presentation/Footer.jsp" %>
     </body>
 </html>

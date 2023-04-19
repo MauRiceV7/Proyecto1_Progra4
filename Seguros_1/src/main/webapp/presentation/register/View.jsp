@@ -41,7 +41,7 @@
                 <div class="etiqueta"> Medio de pago:</div>  
                 <div class="campo"><input type="text" name="tarjetaFld" id="tarjetaFld" placeholder="Tarjeta" ></div>
             </div> 
-            <div><button type="submit" class="btn-login" name="register"> login </button> </div>
+            <div><button type="submit" class="btn-login" name="register"> Register </button> </div>
         </div>
     </form>    
         </main>

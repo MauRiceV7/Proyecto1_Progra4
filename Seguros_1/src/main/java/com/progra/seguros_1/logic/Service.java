@@ -45,7 +45,7 @@ public class Service {
         usuarios = new HashMap();
         //poliza = new HashMap();
         Usuario u1 =  new Usuario("111","uno","Jairo","61187234","jairoisaac20@gmail.com","1111111",1);
-        Usuario admin =  new Usuario("444","cuatri","Mau","67878754","mau20@gmail.com","321312",2);
+        Usuario admin =  new Usuario("444","1","Mau","67878754","mau20@gmail.com","321312",2);
         usuarios.put("111", u1);
         usuarios.put("222", new Usuario("222","dos","cesar","61187234","jairoisaac20@gmail.com","1111111",1));
         usuarios.put("333", new Usuario("333","tres","andres","61187234","jairoisaac20@gmail.com","1111111",1));

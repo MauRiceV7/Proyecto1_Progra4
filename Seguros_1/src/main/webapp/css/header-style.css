@@ -1,0 +1,76 @@
+
+/*VA IR TODA LA PARTE DEL HEADER*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 90px;
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo-company{
+    display: inline-block;
+
+}
+.nombre-company{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+.number{
+    padding-top: 20px;
+}
+.logo-number{
+    display: inline-block;
+}
+.number{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+.logo-login{
+    vertical-align: central;
+    padding-bottom: 20px;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.navigation .button-login{
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+}
+.navigation .button-login:hover{
+   color: lightblue;
+}
+.btn-login{
+    height: 40px;
+    width: 100%;
+    padding-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+.navigation a:hover{
+    color: lightblue;
+}

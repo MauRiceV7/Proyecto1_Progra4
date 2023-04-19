@@ -65,6 +65,38 @@ public class Usuario {
 //    public String toString() {
 //        return "Usuario{" + "id=" + id + ", clave=" + clave + '}';
 //    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getDatosTarjeta() {
+        return datosTarjeta;
+    }
+
+    public void setDatosTarjeta(String datosTarjeta) {
+        this.datosTarjeta = datosTarjeta;
+    }
     
     
 }

@@ -4,42 +4,7 @@
     box-sizing: border-box;
     font-family: 'Popping', sans-serif;
 }
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 90px;
-    background: red;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-}
-.logo-company{
-    display: inline-block;
 
-}
-.nombre-company{
-    display: inline-block;
-    color: #fff;
-    font-weight: 500;
-}
-.number{
-    padding-top: 20px;
-}
-.logo-number{
-    display: inline-block;
-}
-.number{
-    display: inline-block;
-    color: #fff;
-    font-weight: 500;
-}
-.logo-login{
-    vertical-align: central;
-    padding-bottom: 20px;
-}
 .etiqueta{
     width:20%;
     display:inline-block;
@@ -99,33 +64,7 @@ main{
     padding: 12px 0 12px 43px;
 }
 
-/*body{*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    min-height: 100vh;*/
-/*}*/
 
-.navigation a{
-    position: relative;
-    font-size: 1.1em;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
-}
-
-.navigation .button-login{
-    width: 100px;
-    height: 50px;
-    background: transparent;
-    outline: none;
-    border: 2px solid #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1em;
-    color: #fff;
-}
 
 .footer{
     position: fixed;
@@ -153,15 +92,7 @@ main{
     display: inline-block;
     
 }
-.btn-login{
-    height: 40px;
-    width: 100%;
-    padding-bottom: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: black;
-    color: white;
-}
+
 .register-nombre{
     display: inline-block;
     color: #fff;
@@ -176,3 +107,4 @@ input[type=text].is-invalid,input[type=password].is-invalid{
     background-size: 12 12;
     background-image: url("/Banca/images/is-invalid.png");    
 }
+
