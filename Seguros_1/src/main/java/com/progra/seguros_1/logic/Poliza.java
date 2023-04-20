@@ -17,6 +17,7 @@ public class Poliza {
     private String Auto;
     private float valor;
     private Usuario usuario;
+    private String ano;
     
      public Poliza() {
         this.fecha = "";
@@ -25,15 +26,17 @@ public class Poliza {
         this.Auto = "";
         this.valor = 0;
         this.usuario = null; // Esto se saca de la base de datos 
+        this.ano ="";
     }
      
-    public Poliza(String fecha, String placa, String numero, String Auto, float valor, Usuario usuario) {
+    public Poliza(String fecha, String placa, String ano, String numero, String Auto, float valor, Usuario usuario) {
         this.fecha = fecha;
         this.placa = placa;
         this.numero = numero;
         this.Auto = Auto;
         this.valor = valor;
         this.usuario = usuario;
+        this.ano = ano;
     }
 
     public String getFecha() {
@@ -83,6 +86,15 @@ public class Poliza {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    public String getAno() {
+        return ano;
+    }
+
+    public void setAno(String ano) {
+        this.ano = ano;
+    }
+    
     
     
     
