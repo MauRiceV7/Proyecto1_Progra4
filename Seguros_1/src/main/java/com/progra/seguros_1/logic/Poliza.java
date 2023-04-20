@@ -18,6 +18,7 @@ public class Poliza {
     private float valor;
     private Usuario usuario;
     private String ano;
+    private Modelo modelo;
     
      public Poliza() {
         this.fecha = "";
@@ -27,9 +28,10 @@ public class Poliza {
         this.valor = 0;
         this.usuario = null; // Esto se saca de la base de datos 
         this.ano ="";
+        this.modelo = null;
     }
      
-    public Poliza(String fecha, String placa, String ano, String numero, String Auto, float valor, Usuario usuario) {
+    public Poliza(String fecha, String placa, String ano, String numero, String Auto, float valor, Usuario usuario, Modelo modelo) {
         this.fecha = fecha;
         this.placa = placa;
         this.numero = numero;
@@ -37,6 +39,7 @@ public class Poliza {
         this.valor = valor;
         this.usuario = usuario;
         this.ano = ano;
+        this.modelo = modelo;
     }
 
     public String getFecha() {
@@ -94,12 +97,13 @@ public class Poliza {
     public void setAno(String ano) {
         this.ano = ano;
     }
-    
-    
-    
-    
-    
-    
-    
+
+    public Modelo getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(Modelo modelo) {
+        this.modelo = modelo;
+    }
     
 }
