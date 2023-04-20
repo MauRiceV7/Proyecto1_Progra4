@@ -1,9 +1,3 @@
-<%-- 
-    Document   : View
-    Created on : 13 abr 2023, 11:32:42
-    Author     : ESCINF
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,8 +9,14 @@
     <body>
          <%@ include file="/presentation/Header.jsp" %>
          <main>
-              <h1>Aqui ira los menus del administrador </h1> 
-             
+              <table>
+                  <tr>
+                   <td> <li>item</li>  <td>  
+                  <td>
+                      <li>item</li>    
+                  </td>
+                  </tr>
+              </table>
          </main>
           <%@ include file="/presentation/Footer.jsp" %>
     </body>
