@@ -17,20 +17,19 @@ usuario sea y debo verificar si el usuario es nulo o no en el controller de logi
             <div>
               <nav class="navigation">
                   <div class="logo-company"><img src="image/contact-icon.svg" alt="logo-company" style="width: 2em;"></div>
-                  <a href="#">User: <%=usuario.getId()%></a>
-                  <a href="#">Agregar Polizas</a>
-                  <a href="#">Clientes-polizas</a>
-                  <a href="#">Gestion-marcas</a>
-                  <a href="#">categorias-coberturas</a>
+                  <a href="#">User: <%=usuario.getNombre()%></a>
+                    <a href="presentation/admin/marca-modelo">Marcas-modelos</a>
+                    <a href="presentation/admin/categorias-coberturas">Categorias-coberturas</a>
                 <button class="button-login"><a href="presentation/login/logout">Logout</a></button>
               </nav>
             </div>
             <% } else if(usuario!=null && usuario.getTipo() == 1){%> 
                 <div>
                     <nav class="navigation">
+                          <a href="#">About us</a>
+                          <a href="#">Polizas</a>
                          <div class="logo-company"><img src="image/contact-icon.svg" alt="logo-company" style="width: 2em;"></div>
                         <a href="#">User: <%=usuario.getNombre()%></a>
-                         <a href="#">Polizas</a>
                         <button class="button-login"><a href="presentation/login/logout">Logout</a></button>
                     </nav>
                 </div>

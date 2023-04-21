@@ -24,12 +24,9 @@ import java.util.logging.Logger;
  *
  * @author ESCINF
  */
-@WebServlet(name="Controller", urlPatterns={
+@WebServlet(name="LoginController", urlPatterns={
             "/presentation/login/show"
-        ,"/presentation/login/login",
-        "/presentation/login/logout",
-        "/presentation/register/login",
-        "/presentation/register/register"
+        ,"/presentation/login/login"
 })
 public class Controller extends HttpServlet {
    
@@ -53,12 +50,6 @@ public class Controller extends HttpServlet {
                 break;            
             case "/presentation/login/logout":
                 viewUrl=this.logout(request);
-                break;
-            case "/presentation/register/login":
-                viewUrl = "/presentation/register/View.jsp"; break;
-                
-            case "/presentation/register/register":
-                viewUrl = this.register(request);
                 break;
         }
         request.getRequestDispatcher(viewUrl).forward(request, response);
@@ -131,7 +122,7 @@ public class Controller extends HttpServlet {
                      viewUrl = "/presentation/polizas/View.jsp";
                      break;
                  case 2: // Este caso es para la parte del administrador 
-                     viewUrl = "/presentation/admin/View.jsp";
+                     viewUrl = "/presentation/admin/show";
                      break;
              }
              return viewUrl;
