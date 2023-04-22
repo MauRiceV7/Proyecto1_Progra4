@@ -1,3 +1,6 @@
+
+<%@page import="com.progra.seguros_1.logic.Poliza"%>
+<%@page import="com.progra.seguros_1.presentation.login.Model"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -9,15 +12,21 @@
     <body>
          <%@ include file="/presentation/Header.jsp" %>
          <main>
-              <table>
-                  <tr>
-                   <td> <li>item</li>  <td>  
-                  <td>
-                      <li>item</li>    
-                  </td>
-                  </tr>
-              </table>
-         </main>
+             <div>
+                 <h1>Cliente-polizas</h1>     
+                 <table>
+                     <thead>
+                         <tr> <td>Cliente</td> <td>Poliza</td>  </tr>
+                     </thead>
+                     <tbody>
+                        <tr> 
+                            <td>Cliente</td> 
+                            <td>Poliza</td>
+                        </tr>
+                     </tbody>
+                 </table>          
+             </div> 
+          </main>
           <%@ include file="/presentation/Footer.jsp" %>
     </body>
 </html>

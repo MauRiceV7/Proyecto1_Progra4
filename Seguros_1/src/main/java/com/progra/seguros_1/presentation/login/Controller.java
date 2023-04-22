@@ -26,7 +26,9 @@ import java.util.logging.Logger;
  */
 @WebServlet(name="LoginController", urlPatterns={
             "/presentation/login/show"
-        ,"/presentation/login/login"
+        ,"/presentation/login/login", 
+        "/presentation/login/aboutUs",
+        "/presentation/login/logout"
 })
 public class Controller extends HttpServlet {
    
@@ -47,7 +49,10 @@ public class Controller extends HttpServlet {
                 break;              
             case "/presentation/login/login":
                 viewUrl=this.login(request);
-                break;            
+                break;
+            case "/presentation/login/aboutUs":
+                viewUrl = this.aboutUs(request); 
+                break;
             case "/presentation/login/logout":
                 viewUrl=this.logout(request);
                 break;
@@ -62,12 +67,12 @@ public class Controller extends HttpServlet {
         model.getCurrent().setId("");
         return "/presentation/login/View.jsp";
     }
-    
-//    public String login(HttpServletRequest request){
-//        this.updateModel(request);
-//        return "/presentation/polizas/View.jsp";
-//    }
-    
+    public String aboutUs(HttpServletRequest request){
+     Model model = (Model) request.getAttribute("model");
+       model.getCurrent().setClave("");
+        model.getCurrent().setId("");
+        return "/presentation/aboutUs/View.jsp";
+    }    
     public String login(HttpServletRequest request) {
         try {
             Map<String, String> errores = this.validar(request);
@@ -104,7 +109,6 @@ public class Controller extends HttpServlet {
         Model model = (Model) request.getAttribute("model");
         model.getCurrent().setId(request.getParameter("id"));
         model.getCurrent().setClave(request.getParameter("clave"));
-        //request.setAttribute("model",model);
     }
      
      public String loginAction(HttpServletRequest request) {
@@ -164,13 +168,6 @@ public class Controller extends HttpServlet {
          }
          
          System.out.println(service.getUsuarios());
-//     private String id;
-//     private String clave;
-//     private String Nombre;
-//     private String telefono;
-//     private String correo;
-//     private String datosTarjeta;
-//     private Integer tipo;
         return "/presentation/login/View.jsp"; 
     }
     

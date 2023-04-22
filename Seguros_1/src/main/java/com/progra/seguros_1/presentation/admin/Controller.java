@@ -22,9 +22,8 @@ import java.util.logging.Logger;
  * @author ESCINF
  */
 @WebServlet(name="AdminController", urlPatterns={
-        "/presentation/admin/show"
-//        "/presentation/admin/marca-modelo",
-//        "presentation/admin/categorias-coberturas"
+        "/presentation/admin/show","/presentation/admin/marcaModelo",
+    "/presentation/admin/categoriaCobertura"
 })
 public class Controller extends HttpServlet {
    
@@ -43,10 +42,10 @@ public class Controller extends HttpServlet {
             case "/presentation/admin/show":
                 viewUrl = this.show(request);
                 break;
-            case "/presentation/admin/marca-modelo":
+            case "/presentation/admin/marcaModelo":
                 viewUrl = this.marcaModelo(request);
                 break;
-              case "/presentation/admin/categorias-coberturas":
+              case "/presentation/admin/categoriaCobertura":
                 viewUrl = this.categoriasCoberturas(request);
                 break;
         }
@@ -69,11 +68,11 @@ public class Controller extends HttpServlet {
     
     public String marcaModelo(HttpServletRequest request){
         
-        return "";
+        return "/presentation/admin/gestionMarcaModelo/View.jsp";
     }
      public String categoriasCoberturas(HttpServletRequest request){
         
-        return "";
+        return  "/presentation/admin/gestionCategoriaCobertura/View.jsp";
     }
         
 

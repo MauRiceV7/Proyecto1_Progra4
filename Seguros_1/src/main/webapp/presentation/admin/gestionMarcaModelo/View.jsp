@@ -1,6 +1,6 @@
 <%-- 
     Document   : View
-    Created on : 21 abr. 2023, 11:33:22
+    Created on : 21 abr. 2023, 11:30:51
     Author     : Jairo
 --%>
 
@@ -9,9 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Marca-modelo</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>marca-modelo</h1>
     </body>
 </html>

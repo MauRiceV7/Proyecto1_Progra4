@@ -18,15 +18,15 @@ usuario sea y debo verificar si el usuario es nulo o no en el controller de logi
               <nav class="navigation">
                   <div class="logo-company"><img src="image/contact-icon.svg" alt="logo-company" style="width: 2em;"></div>
                   <a href="#">User: <%=usuario.getNombre()%></a>
-                    <a href="presentation/admin/marca-modelo">Marcas-modelos</a>
-                    <a href="presentation/admin/categorias-coberturas">Categorias-coberturas</a>
+                    <a href="presentation/admin/marcaModelo">Marcas-modelos</a>
+                    <a href="presentation/admin/categoriaCobertura">Categorias-coberturas</a>
                 <button class="button-login"><a href="presentation/login/logout">Logout</a></button>
               </nav>
             </div>
             <% } else if(usuario!=null && usuario.getTipo() == 1){%> 
                 <div>
                     <nav class="navigation">
-                          <a href="#">About us</a>
+                          <a href="presentation/login/aboutUs">About us</a>
                           <a href="#">Polizas</a>
                          <div class="logo-company"><img src="image/contact-icon.svg" alt="logo-company" style="width: 2em;"></div>
                         <a href="#">User: <%=usuario.getNombre()%></a>
@@ -37,10 +37,9 @@ usuario sea y debo verificar si el usuario es nulo o no en el controller de logi
            <% if (usuario==null){ %>
              <div>
               <nav class="navigation">
-                  <a href="#">about us</a>
+                  <a href="presentation/login/aboutUs">about us</a>
+                  <a href="presentation/login/show">Login</a>
               </nav>
             </div>
            <% }%>  
       </header>
-      
-<!--      <a href="presentation/login/login">login</a>-->
