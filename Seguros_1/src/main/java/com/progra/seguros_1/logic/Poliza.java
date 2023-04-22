@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.progra.seguros_1.logic;
-
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author Jairo
@@ -14,32 +15,32 @@ public class Poliza {
     private String fecha;
     private String placa;
     private String numero;
-    private String Auto;
     private float valor;
     private Usuario usuario;
     private String ano;
     private Modelo modelo;
+    private List<Cobertura> coberturas;
     
      public Poliza() {
         this.fecha = "";
         this.placa = "";
         this.numero = "";
-        this.Auto = "";
         this.valor = 0;
         this.usuario = null; // Esto se saca de la base de datos 
         this.ano ="";
         this.modelo = null;
+        this.coberturas = new ArrayList();
     }
      
-    public Poliza(String fecha, String placa, String ano, String numero, String Auto, float valor, Usuario usuario, Modelo modelo) {
+    public Poliza(String fecha, String placa, String ano, String numero, float valor, Usuario usuario, Modelo modelo, List<Cobertura> coberturas) {
         this.fecha = fecha;
         this.placa = placa;
         this.numero = numero;
-        this.Auto = Auto;
         this.valor = valor;
         this.usuario = usuario;
         this.ano = ano;
         this.modelo = modelo;
+        this.coberturas = coberturas;
     }
 
     public String getFecha() {
@@ -64,14 +65,6 @@ public class Poliza {
 
     public void setNumero(String numero) {
         this.numero = numero;
-    }
-
-    public String getAuto() {
-        return Auto;
-    }
-
-    public void setAuto(String Auto) {
-        this.Auto = Auto;
     }
 
     public float getValor() {
@@ -104,6 +97,14 @@ public class Poliza {
 
     public void setModelo(Modelo modelo) {
         this.modelo = modelo;
+    }
+
+    public List<Cobertura> getCoberturas() {
+        return coberturas;
+    }
+
+    public void setCoberturas(List<Cobertura> coberturas) {
+        this.coberturas = coberturas;
     }
     
 }

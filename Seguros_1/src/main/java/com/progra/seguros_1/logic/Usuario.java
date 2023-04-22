@@ -97,6 +97,8 @@ public class Usuario {
     public void setDatosTarjeta(String datosTarjeta) {
         this.datosTarjeta = datosTarjeta;
     }
+
+    
     
     
 }

@@ -9,10 +9,12 @@ package com.progra.seguros_1.logic;
  * @author ESCINF
  */
 public class Categoria {
+    private int id;
     private String desc;
 
-    public Categoria(String desc) {
+    public Categoria(String desc, int id) {
         this.desc = desc;
+        this.id = id;
     }
 
     public Categoria() {
@@ -25,4 +27,13 @@ public class Categoria {
     public void setDesc(String desc) {
         this.desc = desc;
     } 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
 }

@@ -9,6 +9,7 @@ package com.progra.seguros_1.logic;
  * @author ESCINF
  */
 public class Cobertura {
+    private int id;
     private String desc;
     private int costoMin;
     private int costPor;
@@ -17,11 +18,12 @@ public class Cobertura {
     public Cobertura() {
     }
 
-    public Cobertura(String desc, int costoMin, int costPor, Categoria categoria) {
+    public Cobertura(String desc, int costoMin, int costPor, Categoria categoria, int id) {
         this.desc = desc;
         this.costoMin = costoMin;
         this.costPor = costPor;
         this.categoria = categoria;
+        this.id  = id;
     }
 
     public String getDesc() {
@@ -55,6 +57,13 @@ public class Cobertura {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
-    
-    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+   
 }
